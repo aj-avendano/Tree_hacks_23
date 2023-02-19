@@ -1,0 +1,13 @@
+<h1>picture pathways</h1>
+
+<form method=”POST”>
+{% csrf_token %}
+<label>Enter your message:</label>
+<input type=”text” name=”user_input” />
+<button type=”submit”>Send</button>
+</form>
+
+{% if image_url %}
+<h2>dalle response:</h2>
+<img src="{{ image_url }}">
+{% endif %}
